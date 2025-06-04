@@ -1,0 +1,1 @@
+SELECT 'Hello from dbt+ databricks ' AS message

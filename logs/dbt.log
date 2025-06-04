@@ -1,0 +1,75 @@
+[0m15:10:13.196163 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB22D12FF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB2358BFB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB22FF9790>]}
+
+
+============================== 15:10:13.211161 | 076ce988-2f93-402b-b835-4e4884044511 ==============================
+[0m15:10:13.211161 [info ] [MainThread]: Running with dbt=1.9.5
+[0m15:10:13.212161 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\1000073978\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt init mdm_proj', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:10:13.232161 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'WindowsPath'.. Dictionary: {'dir': WindowsPath('C:/Users/1000073978/.dbt')}
+[0m15:10:13.233161 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m15:10:13.235170 [debug] [MainThread]: Starter project path: C:\Users\1000073978\my_dbt_proj\venv\Lib\site-packages\dbt\include\starter_project
+[0m15:10:13.269994 [info ] [MainThread]: 
+Your new dbt project "mdm_proj" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:10:13.270992 [info ] [MainThread]: Setting up your profile.
+[0m15:10:37.018584 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m15:10:37.019583 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m15:10:37.020591 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m15:15:41.875918 [error] [MainThread]: Encountered an error:
+
+[0m15:15:41.884918 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\1000073978\my_dbt_proj\venv\Lib\site-packages\dbt\cli\requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1000073978\my_dbt_proj\venv\Lib\site-packages\dbt\cli\requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1000073978\my_dbt_proj\venv\Lib\site-packages\dbt\cli\main.py", line 477, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\1000073978\my_dbt_proj\venv\Lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\1000073978\my_dbt_proj\venv\Lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "C:\Users\1000073978\my_dbt_proj\venv\Lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "C:\Users\1000073978\my_dbt_proj\venv\Lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1000073978\my_dbt_proj\venv\Lib\site-packages\dbt\task\init.py", line 113, in generate_target_from_input
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1000073978\my_dbt_proj\venv\Lib\site-packages\click\termui.py", line 168, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\1000073978\my_dbt_proj\venv\Lib\site-packages\click\termui.py", line 151, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m15:15:41.888773 [debug] [MainThread]: Command `dbt init` failed at 15:15:41.888773 after 328.83 seconds
+[0m15:15:41.889763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB238D0890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB3EAA8740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EB3EADA510>]}
+[0m15:15:41.890766 [debug] [MainThread]: Flushing usage events
+[0m15:15:42.617781 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:16:26.070216 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000208A1D353A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002089F9AE7B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000208A1F17860>]}
+
+
+============================== 15:16:26.077225 | 43c5c01f-9fb4-4004-adea-697d1d71bc28 ==============================
+[0m15:16:26.077225 [info ] [MainThread]: Running with dbt=1.9.5
+[0m15:16:26.078216 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\1000073978\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init mdm_proj', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:16:26.097647 [info ] [MainThread]: A project called mdm_proj already exists here.
+[0m15:16:26.098639 [debug] [MainThread]: Command `dbt init` succeeded at 15:16:26.098639 after 0.16 seconds
+[0m15:16:26.098639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000208A21D7B30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000208A21D7560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000208A34FA750>]}
+[0m15:16:26.099651 [debug] [MainThread]: Flushing usage events
+[0m15:16:26.945288 [debug] [MainThread]: An error was encountered while trying to flush usage events
